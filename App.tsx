@@ -134,7 +134,7 @@ const App: React.FC = () => {
         console.warn("API_KEY environment variable not set.");
         return;
       }
-      aiRef.current = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      aiRef.current = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
     } catch (error) {
        console.error("Failed to initialize GoogleGenAI:", error);
     }
@@ -563,7 +563,7 @@ const App: React.FC = () => {
             
             let fullResponseText = '';
             let fullThinkingText = '';
-            let groundingMetadata = null;
+            let groundingMetadata: any = null;
             let thoughtBuffer = ''; // Buffer to accumulate thought text
             let isInsideThinkingBlock = false;
 
