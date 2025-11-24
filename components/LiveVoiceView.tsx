@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GoogleGenAI, LiveServerMessage, Modality, Blob } from '@google/genai';
 import { CloseIcon, LiveIcon, HistoryIcon, CameraIcon, UploadIcon, PauseIcon } from './Icons';
 
+// Fix for "Cannot find name 'process'" error during build
+declare const process: any;
+
 interface LiveVoiceViewProps {
   onClose: () => void;
   onSend: (transcribedText: string) => void;

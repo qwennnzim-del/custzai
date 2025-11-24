@@ -3,6 +3,9 @@ import { Message, AspectRatio } from '../types';
 import { GoogleGenAI, Modality } from "@google/genai";
 import { HeartIcon, CopyIcon, CheckIcon, ShareIcon, PlayIcon, StopIcon, SpinnerIcon, SparklesIcon, DownloadIcon, EditIcon, CusstzzLogo, GlobeIcon, CodeIcon, CloseIcon, BrainIcon, ChevronDownIcon } from './Icons';
 
+// Fix for "Cannot find name 'process'" error during build
+declare const process: any;
+
 interface FinalBotMessageProps {
   message: Message;
   onStageImageForEditing: (imageUrl: string) => void;

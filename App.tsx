@@ -7,6 +7,9 @@ import LiveVoiceView from './components/LiveVoiceView';
 import Sidebar from './components/Sidebar';
 import { Message, AspectRatio, ModelType, ChatSession } from './types';
 
+// Fix for "Cannot find name 'process'" error during build
+declare const process: any;
+
 const fileToGenerativePart = async (file: File): Promise<Part> => {
   const base64EncodedDataPromise = new Promise<string>((resolve) => {
     const reader = new FileReader();

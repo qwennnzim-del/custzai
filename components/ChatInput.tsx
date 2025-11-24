@@ -3,6 +3,9 @@ import { PlusIcon, SendIcon, VoiceIcon, CloseIcon, SparklesIcon, SpinnerIcon, Fi
 import { ModelType } from '../types';
 import { GoogleGenAI } from "@google/genai";
 
+// Fix for "Cannot find name 'process'" error during build
+declare const process: any;
+
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
   isLoading: boolean;
