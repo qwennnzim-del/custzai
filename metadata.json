@@ -1,0 +1,8 @@
+{
+  "name": "CustzAI",
+  "description": "An AI-powered chatbot named CustzAI with a modern, futuristic interface, allowing users to ask questions and receive responses from the Gemini model.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}
